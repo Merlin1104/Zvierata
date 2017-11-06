@@ -11,22 +11,29 @@ namespace Zvierata
         private int dlzkaNosa; 
 
 
-        public Pes(string meno,string druh, int vek, bool domace, bool cicavec,float radost, int dlzkaNosa) : base(meno,druh, vek, domace, cicavec, radost)
+        public Pes(string typ,string meno,string druh, int vek, bool domace, bool cicavec,float radost, int dlzkaNosa) : base(typ,meno,druh, vek, domace, cicavec, radost)
         {
             this.dlzkaNosa = dlzkaNosa;
         }
 
         public new void info()
         {
-            Console.WriteLine("Toto zviera sa vola: {0} \nDruh: {1}\nVek: {2} \nDomace?: {3} \nCicavec?: {4} \nRadost: {5} \nDlzka nosa: {6}",
-                meno, druh, vek, domace, cicavec, radost, dlzkaNosa);
+            Console.WriteLine("Toto zviera je: {0} \nMeno: {1}\nDruh: {2} \nVek: {3} r. \nDomace: {4} \nCicavec: {5} \nRadost: {6} \nDlzka nosa: {7}",
+                typ,meno, druh, vek, domace, cicavec, radost, dlzkaNosa);
+        }
+
+        
+
+        public new void VydajZvuk()
+        {
+            Console.WriteLine("toto je obecny zvuk zvirete: HAF! ");
         }
 
         public void stekaj()
         {
             Console.WriteLine("Haf !");
             radost += 0.1f;
-            Console.WriteLine("Nova uroven radosti: {0}",radost);
+            Console.WriteLine("Nova uroven radosti: {0}", radost);
         }
     }
 }
