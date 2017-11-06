@@ -26,7 +26,8 @@ namespace Zvierata
 
         public void info()
         {
-            Console.WriteLine("Toto zviera je: {0} \nMeno: {1} \nDruh: {2} \nVek: {3} r. \nDomace: {4} \nCicavec: {5} \nRadost: {6}",typ, meno,druh, vek, domace, cicavec,radost);
+            Console.WriteLine("Toto zviera je: {0} \nMeno: {1} \nDruh: {2} \nVek: {3} r. \nDomace: {4} \nCicavec: {5} \nRadost: {6}"
+                                ,typ, meno,druh, vek, domace, cicavec,radost);
         }
 
         public void VydajZvuk()

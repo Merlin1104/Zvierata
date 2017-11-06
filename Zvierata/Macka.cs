@@ -19,7 +19,7 @@ namespace Zvierata
 
         public new void info()
         {
-            Console.WriteLine("Toto zviera je: {0} \nMeno: {1}\nDruh: {2} \nVek: {3} r. \nDomace: {4} \nCicavec: {5} \nRadost: {6} \nDlzka usi: {7}",
+            Console.WriteLine("Toto zviera je: {0} \nMeno: {1}\nDruh: {2} \nVek: {3} r. \nDomace: {4} \nCicavec: {5} \nRadost: {6} \nDlzka usi: {7} cm.",
                 typ ,meno, druh, vek, domace, cicavec, radost, dlzkaUsi);
         }
 
