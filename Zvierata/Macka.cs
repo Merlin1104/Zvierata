@@ -23,16 +23,22 @@ namespace Zvierata
                 typ ,meno, druh, vek, domace, cicavec, radost, dlzkaUsi);
         }
 
-        public new void VydajZvuk()
+        public override void VydajZvuk()
         {
             Console.WriteLine("toto je obecny zvuk zvirete: MEOW !");
         }
-
+        
         public void Mnaukaj()
         {
             Console.WriteLine("Meow !");
             radost -= 0.1f;
             Console.WriteLine("Nova radost je: {0}", radost);
         }
+        
+        public override void NakrmZviera()
+        {
+            nakrmeny=true;
+        }
+        
     }
 }

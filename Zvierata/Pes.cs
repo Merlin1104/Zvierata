@@ -9,6 +9,7 @@ namespace Zvierata
     class Pes : Zviera
     {
         private int dlzkaNosa; 
+        
 
 
         public Pes(string typ,string meno,string druh, int vek, bool domace, bool cicavec,float radost, int dlzkaNosa) : base(typ,meno,druh, vek, domace, cicavec, radost)
@@ -24,16 +25,23 @@ namespace Zvierata
 
         
 
-        public new void VydajZvuk()
+        public override void VydajZvuk()
         {
             Console.WriteLine("toto je obecny zvuk zvirete: HAF! ");
         }
-
+        
         public void stekaj()
         {
             Console.WriteLine("Haf !");
             radost += 0.1f;
             Console.WriteLine("Nova uroven radosti: {0}", radost);
         }
+
+        
+        public override void NakrmZviera()
+        {
+            nakrmeny=true;
+        }
+        
     }
 }

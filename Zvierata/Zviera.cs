@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Zvierata
 {
-    class Zviera
+    abstract class Zviera
     {
         protected string typ,meno,druh;
         protected int vek;
-        protected bool domace, cicavec;
+        protected bool domace, cicavec,nakrmeny;
         protected float radost;
+        
 
         public Zviera(string typ, string meno,string druh, int vek, bool domace, bool cicavec, float radost)
         {
@@ -22,6 +23,7 @@ namespace Zvierata
             this.domace = domace;
             this.cicavec = cicavec;
             this.radost = radost;
+            
         }
 
         public void info()
@@ -30,10 +32,13 @@ namespace Zvierata
                                 ,typ, meno,druh, vek, domace, cicavec,radost);
         }
 
-        public void VydajZvuk()
+        public virtual void VydajZvuk()
         {
             Console.WriteLine("toto je obecny zvuk zvirete: XXX");
         }
+
+        public abstract void NakrmZviera();
+                  
 
 
     }
